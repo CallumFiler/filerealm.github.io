@@ -1,0 +1,524 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+/* everything */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* body for index page */
+body.index {
+  background: url('');
+  background-color: #0f0e48;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* Link text */
+a {
+  color: white;
+}
+
+/* no horizontal scroll bar */
+body.index {
+  overflow-x: hidden;
+}
+
+
+/* pop up Socials */
+#sticky-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: white; /* White circle */
+  color: black; /* Black arrow */
+  border-radius: 50%; /* Perfect circle */
+  font-size: 32px; /* Increase font size for a bolder look */
+  font-weight: 0; /* Make arrowhead bold */
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 50px; /* Center the arrow vertically */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out, background-color 0.3s; /* Smooth rotation effect */
+  background-color: #242444;
+  color: white
+}
+
+#sticky-arrow:hover {
+  background-color: #ddd; /* Change background on hover */
+  margin-left: 1000px;
+}
+
+#social-icons {
+  position: fixed;
+  bottom: 80px; /* Position above the arrow */
+  right: 12px;
+  display: flex; /* Use flex layout to easily control icon positions */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8); /* Start smaller for smooth scaling effect */
+  transition: all 0.3s ease-in-out 0.2s; /* Smooth transition for all properties */
+  z-index: 9999;
+}
+
+#social-icons.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1); /* Scale up smoothly */
+}
+
+#social-icons a {
+  margin: 10px 0; /* Add vertical spacing between icons */
+  display: inline-block; /* Ensure no white space under logos */
+}
+
+#social-icons img {
+  border-radius: 0%; /* Optional: round the image corners */
+  transition: transform 0.2s ease-in-out; /* Hover effect on icons */
+  background: transparent; /* Remove any background */
+}
+
+#social-icons img:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+#twitter {
+  border-radius: 0; /* Remove rounded corners */
+  height: 48px;
+  width: 48rpx;
+}
+
+#linkedin {
+  border-radius: 0; /* Remove rounded corners */
+  height: 250px;
+  width: 250px;
+}
+
+#instagram {
+  border-radius: 0; /* Remove rounded corners */
+  height: 42px;
+  width: 42px;
+}
+
+#email {
+  border-radius: 0; /* Remove rounded corners */
+  height: 35px;
+  width: 35px;
+}
+
+
+#social-icons .centered {
+  position: relative;
+  margin-bottom: 5px; /* Adjust margin to center it above the arrow */
+}
+
+
+
+
+
+
+
+
+
+
+/* paragraphs */
+p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 30px;
+    position: relative;
+    left: 20%;
+}
+
+/* headers */
+.header { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 30px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Taskbar logo */
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+/* Navbar Custom */
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+
+
+
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width:100%;
+}
+
+/* Button */ 
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Oswald, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 25%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: black;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+
+/* Video on Index page */
+
+iframe {
+  margin-top: 50px;
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* Footer all pages */
+
+footer {
+  position:fixed;
+  background: rgb(24, 24, 44);
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+}
+
+.footertext {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 50px;
+  line-height: 1.6;
+  font-size: 30px;
+  position: relative;
+  left: 43%;
+}
+
+/* body for proposal page */
+body.proposal {
+  background-color:#FF7F50;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+} 
+
+body.proposal .navbar a {
+  font-size: 15px; /* Change to your desired size */
+}
+
+
+/* Text on proposal page */
+.line {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: Oswald, sans-serif;
+  height: 100px;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 16px;
+  margin-top: 115px;
+  margin-left: 700px;
+  margin-bottom: 20px;
+}
+
+.lineUp {
+  animation: 3s anim-lineUp ease-out;
+  position: relative
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
+/* Contact form on Home page */
+
+form {
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-left: 25%;
+  margin-right:25%;
+  width: 50%;
+
+
+}
+
+.formtitle {
+  text-align: center;
+  color: #242444;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #242444;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #242444;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #242444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1f202e;
+}
+
+#responseMessage {
+  text-align: center;
+  margin-top: 15px;
+  color: #28a745; /* Green for success messages */
+}
+
+#responseMessage.error {
+  color: #dc3545; /* Red for error messages */
+}
+
+
+
+/* Index page Overview section */
+.OverviewTitle {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.OverviewTitle .text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+
+
+.image-row {
+  display: flex; /* Use flexbox to align items in a row */
+  justify-content: space-between; /* Space between images */
+  align-items: center; /* Center images vertically if they have different heights */
+}
+
+.image-row img {
+  max-width: 30%; /* Limit the width of each image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image-row img:first-child {
+  margin-left: 10px; /* Add space to the left of the first image */
+}
+
+.image-row img:last-child {
+  margin-right: 10px; /* Add space to the right of the last image */
+}
+
+/* gif on proposal page */
+
+.proposalPicture1 {
+  margin-top: 50px;
+  margin-left: 5%;
+  margin-bottom:400px;
+  width: 200px;
+  height: 200px;
+}
+
+.proposalPicture2 {
+  margin-top: 450px;
+  margin-left: 68%;
+  margin-bottom: 600px;
+  width: 200px;
+  height: 200px;
+}
+
+.proposalPicture3 {
+  margin-top: -400px;
+  margin-left: 2%;
+  margin-bottom: 600px;
+  width: 200px;
+  height: 200px;
+}
+
+.proposalHeading {
+  margin-top: -580px;
+  margin-left: 575px;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 30px;
+  position: relative;
+}
+
+.proposalHeading2 {
+  top: -790px;
+  margin-left: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 30px;
+  position: relative;
+}
+
+.proposalHeading3 {
+  top: -750px;
+  margin-left: 55%;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 30px;
+  position: relative;
+  width: 700px;
+}
+
+.list {
+  font-size: 25px;
+  position: absolute
+}
+
+.list li {
+  margin-bottom: 75px;
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; transform: translateX(-10px)}
+  100%  {opacity: 1; transform: translateX(0)}
+}
